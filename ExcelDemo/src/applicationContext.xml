@@ -50,7 +50,7 @@
 			<value>root</value>
 		</property>
 		<property name="password">
-			<value>123456</value>
+			<value>aA123456</value>
 		</property>       
 	</bean>	
 	<!-- excel -->

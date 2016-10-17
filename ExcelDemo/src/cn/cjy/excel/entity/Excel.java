@@ -40,5 +40,10 @@ public class Excel {
 	public void setDate(String date) {
 		this.date = date;
 	}
+
+	@Override
+	public String toString() {
+		return "Excel [path=" + path + ", name=" + name + ", date=" + date + "]";
+	}
 	
 }
