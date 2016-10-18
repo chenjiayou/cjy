@@ -12,6 +12,7 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.struts2.ServletActionContext;
+import org.eclipse.jdt.internal.compiler.ast.SynchronizedStatement;
 import org.springframework.util.FileCopyUtils;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -73,7 +74,15 @@ public class ExcelAction extends ActionSupport implements ModelDriven<Excel>{
 			Row row = sheet.getRow(i);
 			for(int j=0;j<row.getLastCellNum();j++){
 				Cell cell = row.getCell(j);
-				System.out.print(upload.getValue(cell)+",");
+				if(i==0){
+					System.out.println(upload.getValue(cell));
+					break;
+				}else if(i==(sheet.getLastRowNum()-1)){
+					System.out.println(upload.getValue(cell));
+					break;
+				}else{
+					System.out.print(upload.getValue(cell)+",");
+				}
 			}
 			System.out.println();
 		}

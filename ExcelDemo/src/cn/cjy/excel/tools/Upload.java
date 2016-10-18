@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class Upload {
-	public static Workbook uploadFile(File file) throws Exception{
+	public Workbook uploadFile(File file) throws Exception{
 		Workbook work = null;
 		InputStream inputFile = new FileInputStream(file);
 		String fileName = file.getName();
@@ -39,10 +39,10 @@ public class Upload {
              case Cell.CELL_TYPE_BOOLEAN:  
                  temp = String.valueOf(cell.getBooleanCellValue());  
                  break;  
-             case Cell.CELL_TYPE_FORMULA:  
+   /*          case Cell.CELL_TYPE_FORMULA:  
             	 cell.setCellType(cell.CELL_TYPE_NUMERIC);      
                  temp = String.valueOf(cell.getNumericCellValue());  
-                 break;  
+                 break; */ 
              case Cell.CELL_TYPE_NUMERIC:  
             	 if (HSSFDateUtil.isCellDateFormatted(cell)) {
             		 SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
