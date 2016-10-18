@@ -54,6 +54,7 @@
 		</property>       
 	</bean>	
 	<!-- excel -->
+	<bean id="upload" class="cn.cjy.excel.tools.Upload"></bean>
 	<bean id="excelDao" class="cn.cjy.excel.dao.impl.ExcelDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
@@ -62,5 +63,7 @@
 	</bean>
 	<bean id="excelAction" class="cn.cjy.excel.action.ExcelAction">
 		<property name="excelService" ref="excelService"></property>
+		<property name="upload" ref="upload"></property>
 	</bean>
+	
 </beans>

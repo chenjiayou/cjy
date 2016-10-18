@@ -25,9 +25,20 @@ import cn.cjy.excel.tools.Upload;
 
 public class ExcelAction extends ActionSupport implements ModelDriven<Excel>{
 	public File excel;
+	public Upload upload;
 	public String excelFileName;
 	public IExcelService excelService;
 	private Excel form = new Excel();
+	@Override
+	public Excel getModel() {
+		return form;
+	}
+	public Upload getUpload() {
+		return upload;
+	}
+	public void setUpload(Upload upload) {
+		this.upload = upload;
+	}
 	public File getExcel() {
 		return excel;
 	}
@@ -56,59 +67,16 @@ public class ExcelAction extends ActionSupport implements ModelDriven<Excel>{
 		FileCopyUtils.copy(excel, uploadFile);
 		System.out.println(realPath+""+excelFileName);
 		System.out.println(form.toString());
-		Workbook work = Upload.uploadFile(uploadFile);
+		Workbook work = upload.uploadFile(uploadFile);
 		Sheet sheet =  work.getSheetAt(0);
 		for(int i=0;i<sheet.getLastRowNum();i++){
 			Row row = sheet.getRow(i);
 			for(int j=0;j<row.getLastCellNum();j++){
 				Cell cell = row.getCell(j);
-				System.out.print(getValue(cell)+",");
+				System.out.print(upload.getValue(cell)+",");
 			}
 			System.out.println();
 		}
 		return "success";	
 	}
-	@Override
-	public Excel getModel() {
-		return form;
-	}
-	 private String getValue(Cell cell) {
-		 String temp;
-		 if (cell == null) {  
-             System.out.println("该列为空，赋值双引号");  
-             temp = "NULL";  
-         } else {  
-             int cellType = cell.getCellType();  
-             switch (cellType) {  
-             case Cell.CELL_TYPE_STRING:  
-                 temp = cell.getStringCellValue().trim();   
-                 break;  
-             case Cell.CELL_TYPE_BOOLEAN:  
-                 temp = String.valueOf(cell.getBooleanCellValue());  
-                 break;  
-             case Cell.CELL_TYPE_FORMULA:  
-            	 cell.setCellType(cell.CELL_TYPE_NUMERIC);      
-                 temp = String.valueOf(cell.getNumericCellValue());  
-                 break;  
-             case Cell.CELL_TYPE_NUMERIC:  
-            	 if (HSSFDateUtil.isCellDateFormatted(cell)) {
-            		 SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");
-                     temp = df.format(cell.getDateCellValue()) ; 
-                 } else {  
-                     temp = new DecimalFormat("#.######").format(cell.getNumericCellValue());  
-                 } 
-                 break;  
-             case Cell.CELL_TYPE_BLANK:  
-                 temp = "NULL";  
-                 break;  
-             case Cell.CELL_TYPE_ERROR:  
-                 temp = "ERROR";  
-                 break;  
-             default:  
-                 temp = cell.toString().trim();  
-                 break;  
-             }  
-         }
-		return temp;
-	 }	
 }
