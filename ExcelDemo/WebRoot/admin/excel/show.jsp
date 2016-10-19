@@ -7,38 +7,40 @@
 <title>Insert title here</title>
 <style type="text/css">
 table{
-	border: solid;
-	font-size:11pt;
+	border:1px solid black ;
 	text-align: center;
+	font-size:12px;
 	width: 691px;
 	height: 884px;
-	
+	border-collapse: collapse;
 }
+
 td{
 	width: 151px;
 	height:42px;
+	border: 1px solid black;
 }
 </style>
 </head>
 <body>
-	<div>
-		<table>
+	<div align="center">
+		<table border="2">
 			<tr>
-				<td colspan="6" align="center">申请表</td>
+				<td colspan="6" align="center" style="font-size: 18px;font-weight: bold;">东莞市企业能耗在线监测数据对接申请表</td>
 			</tr>
 			<tr>
-				<td>1</td>
-				<td>2</td>
+				<td>企业名称（盖章）</td>
+				<td colspan="5">2</td>
 			</tr>
 			<tr>
 				<td>2</td>
-				<td>2</td>
+				<td colspan="5">2</td>
 			</tr>
 			<tr>
 				<td>3</td>
 				<td>2</td>
-				<td>3</td>
-				<td>4</td>
+				<td colspan="2">3</td>
+				<td colspan="2">4</td>
 			</tr> 
 			<tr>
 				<td>4</td>
