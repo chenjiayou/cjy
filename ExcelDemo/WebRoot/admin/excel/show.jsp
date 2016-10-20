@@ -11,7 +11,7 @@ table{
 	text-align: center;
 	font-size:15px;
 	font-family:"宋体";
-	width: 691px;
+	width: 696px;
 	height: 884px;
 	border-collapse: collapse;
 }

@@ -2,18 +2,87 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="cn.cjy.excel.entity.Excel" table="excel">
-        <id name="eid" type="java.lang.Integer" column="eid">
+    <class name="cn.cjy.excel.entity.DockExcel" table="dockExcel">
+        <id name="id" type="java.lang.Integer" column="id">
             <generator class="identity" />
         </id>
-        <property name="name" type="java.lang.String" >
-       	<column name="name" length="45"></column>
+        <property name="eName" type="java.lang.String" >
+       	<column name="eName" length="45"></column>
         </property>
-        <property name="path" type="java.lang.String" >
-        <column name="path" length="100"></column>
+        <property name="eAdderss" type="java.lang.String" >
+        <column name="eAdderss" length="100"></column>
         </property>
-        <property name="date" type="java.lang.String" >
-        <column name="date" length="20"></column>
+        <property name="belongTown" type="java.lang.String" >
+        <column name="belongTown" length="10"></column>
+        </property>
+        <property name="industry" type="java.lang.String" >
+        <column name="industry" length="100"></column>
+        </property>
+        <property name="eManagePeople" type="java.lang.String" >
+        <column name="eManagePeople" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTeManagePhoneown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
+        </property>
+        <property name="BelongTown" type="java.lang.String" >
+        <column name="BelongTown" length="10"></column>
         </property>
     </class>
 </hibernate-mapping>
