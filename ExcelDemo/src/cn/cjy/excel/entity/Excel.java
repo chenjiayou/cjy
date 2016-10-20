@@ -45,5 +45,5 @@ public class Excel {
 	public String toString() {
 		return "Excel [path=" + path + ", name=" + name + ", date=" + date + "]";
 	}
-	
+
 }
