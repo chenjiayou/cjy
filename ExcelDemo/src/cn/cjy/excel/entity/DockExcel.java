@@ -2,16 +2,16 @@ package cn.cjy.excel.entity;
 
 public class DockExcel {
 	private Integer id;
-	private String eName;  //企业名
-	private String eAdderss;//企业地址
+	private String ename;  //企业名
+	private String eadderss;//企业地址
 	private String belongTown;//所属街镇
 	private String industry;//所属行业
-	private String eManagePeople;//企业节能负责人
-	private String eManagePhone;//企业管理人电话
-	private String eManageMail;//企业管理人电子邮箱
-	private String eContactPeople;//企业联系人
-	private String eContactPhone;//企业联系人电话
-	private String eContactMail;//企业联系人电子邮箱
+	private String emanagePeople;//企业节能负责人
+	private String emanagePhone;//企业管理人电话
+	private String emanageMail;//企业管理人电子邮箱
+	private String econtactPeople;//企业联系人
+	private String econtactPhone;//企业联系人电话
+	private String econtactMail;//企业联系人电子邮箱
 	private String serviceEnterprise;//服务公司
 	private String serviceContact;//服务公司联系人
 	private String serviceContactPhone;//服务联系人电话
@@ -38,17 +38,18 @@ public class DockExcel {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String geteName() {
-		return eName;
+
+	public String getEname() {
+		return ename;
 	}
-	public void seteName(String eName) {
-		this.eName = eName;
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
-	public String geteAdderss() {
-		return eAdderss;
+	public String getEadderss() {
+		return eadderss;
 	}
-	public void seteAdderss(String eAdderss) {
-		this.eAdderss = eAdderss;
+	public void setEadderss(String eadderss) {
+		this.eadderss = eadderss;
 	}
 	public String getBelongTown() {
 		return belongTown;
@@ -62,41 +63,42 @@ public class DockExcel {
 	public void setIndustry(String industry) {
 		this.industry = industry;
 	}
-	public String geteManagePeople() {
-		return eManagePeople;
+
+	public String getEmanagePeople() {
+		return emanagePeople;
 	}
-	public void seteManagePeople(String eManagePeople) {
-		this.eManagePeople = eManagePeople;
+	public void setEmanagePeople(String emanagePeople) {
+		this.emanagePeople = emanagePeople;
 	}
-	public String geteManagePhone() {
-		return eManagePhone;
+	public String getEmanagePhone() {
+		return emanagePhone;
 	}
-	public void seteManagePhone(String eManagePhone) {
-		this.eManagePhone = eManagePhone;
+	public void setEmanagePhone(String emanagePhone) {
+		this.emanagePhone = emanagePhone;
 	}
-	public String geteManageMail() {
-		return eManageMail;
+	public String getEmanageMail() {
+		return emanageMail;
 	}
-	public void seteManageMail(String eManageMail) {
-		this.eManageMail = eManageMail;
+	public void setEmanageMail(String emanageMail) {
+		this.emanageMail = emanageMail;
 	}
-	public String geteContactPeople() {
-		return eContactPeople;
+	public String getEcontactPeople() {
+		return econtactPeople;
 	}
-	public void seteContactPeople(String eContactPeople) {
-		this.eContactPeople = eContactPeople;
+	public void setEcontactPeople(String econtactPeople) {
+		this.econtactPeople = econtactPeople;
 	}
-	public String geteContactPhone() {
-		return eContactPhone;
+	public String getEcontactPhone() {
+		return econtactPhone;
 	}
-	public void seteContactPhone(String eContactPhone) {
-		this.eContactPhone = eContactPhone;
+	public void setEcontactPhone(String econtactPhone) {
+		this.econtactPhone = econtactPhone;
 	}
-	public String geteContactMail() {
-		return eContactMail;
+	public String getEcontactMail() {
+		return econtactMail;
 	}
-	public void seteContactMail(String eContactMail) {
-		this.eContactMail = eContactMail;
+	public void setEcontactMail(String econtactMail) {
+		this.econtactMail = econtactMail;
 	}
 	public String getServiceEnterprise() {
 		return serviceEnterprise;
@@ -196,10 +198,10 @@ public class DockExcel {
 	}
 	@Override
 	public String toString() {
-		return "DockExcel [id=" + id + ", eName=" + eName + ", eAdderss=" + eAdderss + ", belongTown=" + belongTown
-				+ ", industry=" + industry + ", eManagePeople=" + eManagePeople + ", eManagePhone=" + eManagePhone
-				+ ", eManageMail=" + eManageMail + ", eContactPeople=" + eContactPeople + ", eContactPhone="
-				+ eContactPhone + ", eContactMail=" + eContactMail + ", serviceEnterprise=" + serviceEnterprise
+		return "DockExcel [id=" + id + ", ename=" + ename + ", eadderss=" + eadderss + ", belongTown=" + belongTown
+				+ ", industry=" + industry + ", emanagePeople=" + emanagePeople + ", emanagePhone=" + emanagePhone
+				+ ", emanageMail=" + emanageMail + ", econtactPeople=" + econtactPeople + ", econtactPhone="
+				+ econtactPhone + ", econtactMail=" + econtactMail + ", serviceEnterprise=" + serviceEnterprise
 				+ ", serviceContact=" + serviceContact + ", serviceContactPhone=" + serviceContactPhone
 				+ ", serviceContactMail=" + serviceContactMail + ", projectStartAndStopTime=" + projectStartAndStopTime
 				+ ", projectInvestmentTotal=" + projectInvestmentTotal + ", systemAmount=" + systemAmount

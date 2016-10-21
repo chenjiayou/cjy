@@ -2,15 +2,15 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="cn.cjy.excel.entity.Excel" table="excel">
+    <class name="cn.cjy.excel.entity.DockExcel" table="dockexcel">
      <id name="id" type="java.lang.Integer" column="id">
    		 <generator class="identity" />
 	</id>
-	<property name="eName" type="java.lang.String" >
-		<column name="eName" length="45"></column>
+	<property name="ename" type="java.lang.String" >
+		<column name="ename" length="45"></column>
 	</property>
-	<property name="eAdderss" type="java.lang.String" >
-		<column name="eAdderss" length="100"></column>
+	<property name="eadderss" type="java.lang.String" >
+		<column name="eadderss" length="100"></column>
 	</property>
 	<property name="belongTown" type="java.lang.String" >
 		<column name="belongTown" length="10"></column>
@@ -18,9 +18,72 @@
 	<property name="industry" type="java.lang.String" >
 		<column name="industry" length="100"></column>
 	</property>
-	<property name="eManagePeople" type="java.lang.String" >
-		<column name="eManagePeople" length="10"></column>
+	<property name="emanagePeople" type="java.lang.String" >
+		<column name="emanagePeople" length="20"></column>
 	</property>
+	<property name="emanagePhone" type="java.lang.String" >
+		<column name="emanagePhone" length="20"></column>
+	</property>
+	<property name="emanageMail" type="java.lang.String" >
+		<column name="emanageMail" length="40"></column>
+	</property>
+	<property name="econtactPeople" type="java.lang.String" >
+		<column name="econtactPeople" length="20"></column>
+	</property>
+	<property name="econtactPhone" type="java.lang.String" >
+		<column name="econtactPhone" length="20"></column>
+	</property>
+	<property name="econtactMail" type="java.lang.String" >
+		<column name="econtactMail" length="40"></column>
+	</property>
+	<property name="serviceEnterprise" type="java.lang.String" >
+		<column name="serviceEnterprise" length="40"></column>
+	</property>
+	<property name="serviceContact" type="java.lang.String" >
+		<column name="serviceContact" length="10"></column>
+	</property>
+	<property name="serviceContactPhone" type="java.lang.String" >
+		<column name="serviceContactPhone" length="20"></column>
+	</property>
+	<property name="serviceContactMail" type="java.lang.String" >
+		<column name="serviceContactMail" length="40"></column>
+	</property>
+	<property name="projectStartAndStopTime" type="java.lang.String" >
+		<column name="projectStartAndStopTime" length="40"></column>
+	</property>
+	<property name="projectInvestmentTotal" type="java.lang.Double" >
+		<column name="projectInvestmentTotal" not-null="true"></column>
+	</property>
+	<property name="systemAmount" type="java.lang.Double" >
+		<column name="systemAmount" not-null="true"></column>
+	</property>
+	<property name="equipmentAmount" type="java.lang.Double" >
+		<column name="equipmentAmount" not-null="true"></column>
+	</property>
+	<property name="fixAmount" type="java.lang.Double" >
+		<column name="fixAmount" not-null="true"></column>
+	</property>
+	<property name="otherAmount" type="java.lang.Double" >
+		<column name="otherAmount" not-null="true"></column>
+	</property>
+	<property name="FirstPoint" type="java.lang.Integer" >
+		<column name="FirstPoint" not-null="true"></column>
+	</property>
+	<property name="secondPoint" type="java.lang.Integer" >
+		<column name="secondPoint" not-null="true"></column>
+	</property>
+	<property name="equipmentPoint" type="java.lang.Integer" >
+		<column name="equipmentPoint" not-null="true"></column>
+	</property>
+	<property name="dockMode" type="java.lang.Integer" >
+		<column name="dockMode" not-null="true"></column>
+	</property>
+	<property name="dockAccount" type="java.lang.String" >
+		<column name="dockAccount" length="20"></column>
+	</property>	
+	<property name="dockPassword" type="java.lang.String" >
+		<column name="dockPassword" length="20"></column>
+	</property>	
     </class>
 </hibernate-mapping>
 

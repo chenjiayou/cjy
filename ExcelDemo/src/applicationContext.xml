@@ -21,6 +21,7 @@
 		<property name="mappingResources">
 			<list>
 				<value>cn/cjy/excel/entity/Excel.hbm.xml</value>
+				<value>cn/cjy/excel/entity/DockExcel.hbm.xml</value>
 			</list>
 		</property>
  	</bean>
@@ -65,5 +66,15 @@
 		<property name="excelService" ref="excelService"></property>
 		<property name="upload" ref="upload"></property>
 	</bean>
-	
+	<!-- DockExcel -->
+	<bean id="dockDao" class="cn.cjy.excel.dao.impl.DockDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="dockService" class="cn.cjy.excel.service.impl.DockServiceImpl">
+		<property name="dockDao" ref="dockDao"></property>
+	</bean>
+	<bean id="dockAction" class="cn.cjy.excel.action.DockAction">
+		<property name="dockService" ref="dockService"></property>
+		<property name="upload" ref="upload"></property>
+	</bean>
 </beans>
