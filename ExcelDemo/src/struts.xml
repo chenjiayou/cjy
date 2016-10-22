@@ -29,4 +29,16 @@
             </result>
         </action>
     </package>
+    
+    <package name="company" namespace="/company" extends="struts-default">
+        <action name="company_*" class="companyAction" method="{1}">
+            <result name="success">/admin/excel/success.jsp</result>
+            
+            <result name="pptdownload" type="stream">
+            	<param name="ContentDisposition">attachment;filename="${filename}"</param>
+            	<param name="inputName">downloadFile</param>
+            	<param name="bufferSize">1024000</param>
+            </result>
+        </action>
+    </package>
 </struts>
