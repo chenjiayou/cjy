@@ -67,6 +67,7 @@ public class CompanyAction extends ActionSupport implements ModelDriven<Company>
 		Sheet sheet =  work.getSheetAt(0);
 		List<Company> list ;
 		list = getCompany(sheet);
+		System.out.println(list.size());
 		for(Company c:list){
 			companyService.save(c);
 		}

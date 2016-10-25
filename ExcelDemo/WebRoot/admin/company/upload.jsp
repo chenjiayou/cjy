@@ -31,7 +31,7 @@
   		<td><s:reset value="取消"></s:reset></td>
   	</tr>		 
    	</s:form>
-  	<s:form action="dock_showAllDock" namespace="/dock" method="post">
+  	<s:form action="http://59.37.20.106:100/Online_Cop_List.aspx"  method="post">
   		<s:submit value="查询"></s:submit>
   	</s:form>
   </table>
