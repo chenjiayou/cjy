@@ -23,6 +23,7 @@
 				<value>cn/cjy/excel/entity/Excel.hbm.xml</value>
 				<value>cn/cjy/excel/entity/DockExcel.hbm.xml</value>
 				<value>cn/cjy/excel/entity/Company.hbm.xml</value>
+				<value>cn/cjy/excel/entity/Enterprise.hbm.xml</value>
 			</list>
 		</property>
  	</bean>
@@ -87,6 +88,17 @@
 	</bean>
 	<bean id="companyAction" class="cn.cjy.excel.action.CompanyAction">
 		<property name="companyService" ref="companyService"></property>
+		<property name="upload" ref="upload"></property>
+	</bean>
+	<!-- Enterprise -->
+	<bean id="enterpriseDao" class="cn.cjy.excel.dao.impl.EnterpriseDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="enterpriseService" class="cn.cjy.excel.service.impl.EnterpriseServiceImpl">
+		<property name="enterpriseDao" ref="enterpriseDao"></property>
+	</bean>
+	<bean id="enterpriseAction" class="cn.cjy.excel.action.EnterpriseAction">
+		<property name="enterpriseService" ref="enterpriseService"></property>
 		<property name="upload" ref="upload"></property>
 	</bean>
 </beans>
