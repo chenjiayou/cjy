@@ -45,7 +45,7 @@ public class Upload {
                  break; */ 
              case Cell.CELL_TYPE_NUMERIC:  
             	 if (HSSFDateUtil.isCellDateFormatted(cell)) {
-            		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+            		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                      temp = df.format(cell.getDateCellValue()) ; 
                  } else {  
                      temp = new DecimalFormat("#.######").format(cell.getNumericCellValue());  
