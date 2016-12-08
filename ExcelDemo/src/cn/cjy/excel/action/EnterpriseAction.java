@@ -77,7 +77,7 @@ public class EnterpriseAction extends ActionSupport implements ModelDriven<Enter
 		List<Enterprise> listEnterprise = new ArrayList<Enterprise>();
 		Row row = null;
 		Cell cell,cell2,cell3,cell4,cell5,cell6,cell7= null;
-		for(int i=0;i<=sheet.getLastRowNum();i++){
+		for(int i=1;i<=sheet.getLastRowNum();i++){
 			row = sheet.getRow(i);
 			cell = row.getCell(0);
 			if(upload.getValue(cell).equals("NULL")){

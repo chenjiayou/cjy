@@ -7,6 +7,7 @@
 	<constant name="struts.ui.theme" value="simple"/>
 	<constant name="struts.configutration.xml.reload" value="true"/>
 	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.multipart.maxSize" value="20971520" />
     <package name="excel" namespace="/excel" extends="struts-default">
         <action name="excel_*" class="excelAction" method="{1}">
             <result name="success">/admin/excel/success.jsp</result>
