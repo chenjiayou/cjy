@@ -21,7 +21,7 @@
   		<td><font><s:property value="#error.date"/> </font></td>
   	</tr>
   	<tr>
-  		<td><s:label value="课件："></s:label></td>
+  		<td><s:label value="上传excel："></s:label></td>
   		<td><s:file name="excel" ></s:file></td>
   		<td><font><s:property value="#error.path"/> </font></td>
   	</tr>
